@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnOpsi"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/btnBackGambar"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/back"
+                    android:contentDescription="Kembali"
+                    app:tint="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/btnPinGambar"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/pin"
+                        app:tint="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/btnArsipGambar"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/arsip"
+                        app:tint="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/btnNotifGambar"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/notif"
+                        app:tint="@color/black" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/ivPreviewGambar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/congambar" />
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/etJudulGambar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Judul"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:background="@null"
+                android:paddingVertical="8dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences" />
+
+            <LinearLayout
+                android:id="@+id/layoutWaktuGambar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/notif"
+                    app:tint="@color/primary_dark" />
+
+                <TextView
+                    android:id="@+id/tvJamGambar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="00:00"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etCatatanGambar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Catatan"
+                android:textSize="16sp"
+                android:background="@null"
+                android:gravity="top"
+                android:paddingVertical="8dp"
+                android:textColor="@color/grey_text"
+                android:inputType="textMultiLine"
+                android:minLines="5" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/btnOpsi"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/titik3"
+        app:tint="@color/black" />
+
+</RelativeLayout>
